@@ -7,9 +7,15 @@ import (
 )
 
 func Routes() *gin.Engine {
+	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
 
-	router.LoadHTMLGlob("views/*")
+	files := []string{
+		"views/index.html", "views/404.html",
+		"views/includes/footer.tmpl", "views/includes/header.tmpl",
+	}
+
+	router.LoadHTMLFiles(files...)
 
 	/*api := router.Group("/api")
 	{
