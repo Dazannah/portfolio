@@ -6,22 +6,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Routes() *gin.Engine {
+func Routes(htmlTemplates []string) *gin.Engine {
 	gin.SetMode(gin.DebugMode)
 	router := gin.Default()
 
-	files := []string{
-		"views/index.html", "views/404.html",
-		"views/includes/footer.tmpl", "views/includes/header.tmpl",
-	}
-
-	router.LoadHTMLFiles(files...)
-
-	/*api := router.Group("/api")
-	{
-		api.GET("/", controller.LoginController)
-		api.POST("/", controller.Login)
-	}*/
+	router.LoadHTMLFiles(htmlTemplates...)
 
 	base := router.Group("/")
 	{
