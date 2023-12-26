@@ -23,7 +23,7 @@ func RenderHome(c *gin.Context) {
 	}
 
 	c.HTML(200, "index.html", gin.H{
-		"title": "This is the title",
+		"title": "Fábián Dávid | Portfólió",
 		"projects": gin.H{
 			"project1": project1,
 			"project0": project0,
