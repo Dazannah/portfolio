@@ -11,6 +11,7 @@ func Routes(htmlTemplates []string) *gin.Engine {
 	router := gin.Default()
 
 	router.LoadHTMLFiles(htmlTemplates...)
+	router.Static("/public", "./public")
 
 	base := router.Group("/")
 	{
