@@ -2,15 +2,11 @@
 <nav class="fixed top-0 w-full flex items-center justify-between flex-wrap bg-blue-500 p-6">
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm ml-25 lg:flex-grow">
-      <a href="#introduction" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:text-white hover:bg-blue-700 mt-4 lg:mt-0">
-        Kezdőlap
+    {{range .}}
+      <a href="{{.href}}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:text-white hover:bg-blue-700 mt-4 lg:mt-0">
+        {{.name}}
       </a>
-      <a href="#projects" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:text-white hover:bg-blue-700 mt-4 lg:mt-0">
-        Projektek
-      </a>
-      <a href="#contact" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:text-white hover:bg-blue-700 mt-4 lg:mt-0">
-        Kapcsolat
-      </a>
+      {{end}}
     </div>
     <div>
       <a href="/public/cv.pdf" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:text-white hover:bg-blue-700 mt-4 lg:mt-0">Önéletrajz</a>

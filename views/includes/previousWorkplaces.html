@@ -1,0 +1,28 @@
+{{define "previousWorkplaces.html"}}
+<div id="workplaces" class="container mx-auto">
+  <div class="max-w-screen-lg px-4 md:px-8">
+    <div class="max-w-md">
+      <h1 class="text-gray-800 text-2xl font-extrabold sm:text-3xl">
+        Korábbi munkahelyek
+      </h1>
+    </div>
+    <ul class="mt-12 max-w-full">
+        {{range .}}
+        <li class="px-4 py-5 duration-150 hover:border-white hover:rounded-xl hover:bg-gray-50">
+            <div class="flex items-center gap-x-3">
+              <div>
+                <span class="block text-sm text-blue-600 font-medium">{{.workPlaceName}}</span>
+                <span class="text-base text-gray-800 mt-1">{{.date}}</span>
+                <h3 class="text-base text-gray-800 font-semibold mt-1">{{.position}}</h3>
+              </div>
+            </div>
+            <p class="text-gray-600 sm:text-sm">{{.description}}</p><br>
+            <div class="text-sm text-gray-600 flex items-center gap-6">
+                <span>{{.worklocation}}</span>
+            </div>
+        </li>
+        {{end}}
+    </ul>
+  </div>
+</div>
+{{end}}
