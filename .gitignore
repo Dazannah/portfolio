@@ -22,3 +22,5 @@ go.work
 
 node_modules
 public/pics/
+public/cv.pdf
+portfolio

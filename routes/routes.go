@@ -16,6 +16,7 @@ func Routes(htmlTemplates []string) *gin.Engine {
 	base := router.Group("/")
 	{
 		base.GET("/", controller.RenderHome)
+
 		base.GET("/:catchAll", func(ctx *gin.Context) {
 			ctx.HTML(200, "404.html", "")
 		})

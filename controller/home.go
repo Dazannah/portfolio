@@ -27,6 +27,14 @@ func RenderHome(c *gin.Context) {
 	}
 
 	//apps
+	myblog := map[string]string{
+		"img":          "/public/pics/myblog.png",
+		"title":        "Blog",
+		"description":  "Bloggerek követése, blogokra kommentelés",
+		"technologies": "Laravel, Tailwind CSS, Blade, MySQL",
+		"link":         "https://myblog.davidfabian.hu/",
+		"github":       "https://github.com/Dazannah/blog-blade",
+	}
 	portfolio := map[string]string{
 		"img":          "/public/pics/portfolio.png",
 		"title":        "Portfolió oldal",
@@ -49,7 +57,7 @@ func RenderHome(c *gin.Context) {
 		"workPlaceName": "Csongrád-Csanád Vármegyei Pedagógiai Szakszolgálat",
 		"date":          "2019 január - 2020 január",
 		"position":      "Rendszergazda",
-		"description":   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"description":   "",
 		"worklocation":  "Szeged, Makó, Hódmezővásárhely",
 	}
 
@@ -57,14 +65,14 @@ func RenderHome(c *gin.Context) {
 		"workPlaceName": "Infolan Kft.",
 		"date":          "2020 február -",
 		"position":      "Rendszergazda",
-		"description":   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"description":   "",
 		"worklocation":  "Hódmezővásárhely, Makó",
 	}
 
 	c.HTML(200, "index.html", gin.H{
 		"title":      "Fábián Dávid | Portfólió",
 		"buttons":    []map[string]string{introductionButton, workplacesButton, studiesButton, projectsButton, contactButton},
-		"projects":   []map[string]string{todoApp, portfolio},
+		"projects":   []map[string]string{myblog, todoApp, portfolio},
 		"workplaces": []map[string]string{infolan, csmpsz},
 		"studies":    []map[string]string{},
 	})

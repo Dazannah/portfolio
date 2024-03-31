@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"portfolio/routes"
@@ -30,7 +29,7 @@ func readViewsFolderContent(path string, htmlTemplates *[]string) {
 		if file.IsDir() {
 			readViewsFolderContent(path+file.Name()+"/", htmlTemplates)
 		} else {
-			fmt.Println(path + file.Name())
+			//fmt.Println(path + file.Name())
 			*htmlTemplates = append(*htmlTemplates, path+file.Name())
 		}
 	}
