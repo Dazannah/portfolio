@@ -69,11 +69,39 @@ func RenderHome(c *gin.Context) {
 		"worklocation":  "Hódmezővásárhely, Makó",
 	}
 
+	iec := map[string]string{
+		"schoolName":  "International Education Center",
+		"date":        "2023 március - 2024 január",
+		"course":      "Junior Fullstack API fejlesztő",
+		"description": "",
+	}
+
+	jgypk := map[string]string{
+		"schoolName":  "Szegedi Tudományegyetem Juhász Gyula Pedagógusképző Kar",
+		"date":        "2016. szeptember - 2019. január",
+		"course":      "Mérnökinformatikus-asszisztens",
+		"description": "",
+	}
+
+	gd := map[string]string{
+		"schoolName":  "Szegedi SzC Gábor Dénes Szakgimnáziuma és Szakközépiskolája",
+		"date":        "2013. szeptember - 2016. június",
+		"course":      "Rendszergazda",
+		"description": "",
+	}
+
+	signum := map[string]string{
+		"schoolName":  "Szent István Egyházi Általános Iskola, Gimnázium és Kollégium",
+		"date":        "2009. szeptember - 2013. június",
+		"course":      "Érettségi",
+		"description": "",
+	}
+
 	c.HTML(200, "index.html", gin.H{
 		"title":      "Fábián Dávid | Portfólió",
 		"buttons":    []map[string]string{introductionButton, workplacesButton, studiesButton, projectsButton, contactButton},
 		"projects":   []map[string]string{myblog, todoApp, portfolio},
 		"workplaces": []map[string]string{infolan, csmpsz},
-		"studies":    []map[string]string{},
+		"studies":    []map[string]string{iec, jgypk, gd, signum},
 	})
 }
