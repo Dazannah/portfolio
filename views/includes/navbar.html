@@ -1,5 +1,5 @@
 {{define "navbar.html"}}
-<nav class="fixed top-0 w-full flex items-center justify-between flex-wrap bg-blue-500 p-6">
+<nav id='navbar' class="hidden sm:flex sticky top-0 w-full items-center justify-between flex-wrap bg-blue-500 p-6">
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm ml-25 lg:flex-grow">
     {{range .}}
@@ -11,6 +11,42 @@
     <div>
       <a href="/public/cv.pdf" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:text-white hover:bg-blue-700 mt-4 lg:mt-0">Önéletrajz</a>
     </div>
+    <div id='closeButton' onclick='hideMenu()' class='hidden fixed top-0 right-0 hover:cursor-pointer'>
+      <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Menu / Close_MD"> <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+    </div>  
   </div>
 </nav>
+<div id='hamburgerMenu' onclick="showMenu()" class="fixed top-0 right-0 sm:hidden hover:cursor-pointer">
+  <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+</div>
+
+<script>
+  function showMenu(){
+    const navbar = document.getElementById('navbar')
+    const hamburgerMenu = document.getElementById('hamburgerMenu')
+    const closeButton = document.getElementById('closeButton')
+
+    navbar.classList.remove('hidden')
+    navbar.classList.add('fixed')
+
+    hamburgerMenu.classList.add('hidden')
+    closeButton.classList.remove('hidden')
+
+    navbar.classList.add('sticky')
+  }
+
+  function hideMenu(){
+    const navbar = document.getElementById('navbar')
+    const hamburgerMenu = document.getElementById('hamburgerMenu')
+    const closeButton = document.getElementById('closeButton')
+
+    navbar.classList.add('hidden')
+    navbar.classList.remove('fixed')
+
+    hamburgerMenu.classList.remove('hidden')
+    closeButton.classList.add('hidden')
+
+  }
+
+</script>
 {{end}}
