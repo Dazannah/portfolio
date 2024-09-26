@@ -30,7 +30,7 @@ func RenderHome(c *gin.Context) {
 	appointment := map[string]string{
 		"img":          "/public/pics/appointment.png",
 		"title":        "Appointment",
-		"description":  "Időontok foglalása",
+		"description":  "Időpontok foglalása, kezelése",
 		"technologies": "Laravel, Tailwind CSS, Blade, MySQL",
 		"link":         "https://appointment.davidfabian.hu/",
 		"github":       "https://github.com/Dazannah/appointment",
