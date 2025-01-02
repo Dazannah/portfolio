@@ -35,14 +35,14 @@ func RenderHome(c *gin.Context) {
 		"link":         "https://appointment.davidfabian.hu/",
 		"github":       "https://github.com/Dazannah/appointment",
 	}
-	myblog := map[string]string{
-		"img":          "/public/pics/myblog.png",
-		"title":        "Blog",
-		"description":  "Bloggerek követése, blogokra kommentelés",
-		"technologies": "Laravel, Tailwind CSS, Blade, MySQL",
-		"link":         "https://myblog.davidfabian.hu/",
-		"github":       "https://github.com/Dazannah/blog-blade",
-	}
+	// myblog := map[string]string{
+	// 	"img":          "/public/pics/myblog.png",
+	// 	"title":        "Blog",
+	// 	"description":  "Bloggerek követése, blogokra kommentelés",
+	// 	"technologies": "Laravel, Tailwind CSS, Blade, MySQL",
+	// 	"link":         "https://myblog.davidfabian.hu/",
+	// 	"github":       "https://github.com/Dazannah/blog-blade",
+	// }
 	portfolio := map[string]string{
 		"img":          "/public/pics/portfolio.png",
 		"title":        "Portfolió oldal",
@@ -71,7 +71,7 @@ func RenderHome(c *gin.Context) {
 
 	infolan := map[string]string{
 		"workPlaceName": "Infolan Kft.",
-		"date":          "2020 február -",
+		"date":          "2020 február - jelenleg is",
 		"position":      "Rendszergazda",
 		"description":   "",
 		"worklocation":  "Hódmezővásárhely, Makó",
@@ -79,7 +79,7 @@ func RenderHome(c *gin.Context) {
 
 	iec := map[string]string{
 		"schoolName":  "International Education Center",
-		"date":        "2023 március - 2024 november",
+		"date":        "2023 március - 2024 december",
 		"course":      "Junior Fullstack API fejlesztő",
 		"description": "",
 	}
@@ -108,7 +108,7 @@ func RenderHome(c *gin.Context) {
 	c.HTML(200, "index.html", gin.H{
 		"title":      "Fábián Dávid | Portfólió",
 		"buttons":    []map[string]string{introductionButton, workplacesButton, studiesButton, projectsButton, contactButton},
-		"projects":   []map[string]string{appointment, myblog, todoApp, portfolio},
+		"projects":   []map[string]string{appointment, todoApp, portfolio},
 		"workplaces": []map[string]string{infolan, csmpsz},
 		"studies":    []map[string]string{iec, jgypk, gd, signum},
 	})
