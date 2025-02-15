@@ -73,21 +73,23 @@ func RenderHome(c *gin.Context) {
 		"workPlaceName": "Infolan Kft.",
 		"date":          "2020 február - jelenleg is",
 		"position":      "Rendszergazda",
-		"description":   "",
-		"worklocation":  "Hódmezővásárhely, Makó",
+		"description": `Rendszergazdai feladatok elvégzése melett, CSMEKHM intrawebes jogosultságigénylő alkalmazás fejlesztése, karbantartása.
+		NodeJS, MongoDB, és React-ot használva. 
+		`,
+		"worklocation": "Hódmezővásárhely, Makó",
 	}
 
 	iec := map[string]string{
 		"schoolName":  "International Education Center",
 		"date":        "2023 március - 2024 december",
 		"course":      "Junior Fullstack API fejlesztő",
-		"description": "",
+		"description": "Tanultak: PHP, JavaScript, Yii2, MySQL, REST API.",
 	}
 
 	jgypk := map[string]string{
 		"schoolName":  "Szegedi Tudományegyetem Juhász Gyula Pedagógusképző Kar",
 		"date":        "2016 szeptember - 2019 január",
-		"course":      "Mérnökinformatikus-asszisztens",
+		"course":      "Felsőfokú rendszergazda mérnökinformatikus-asszisztens",
 		"description": "",
 	}
 
