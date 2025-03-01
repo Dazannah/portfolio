@@ -5,8 +5,12 @@ import "github.com/gin-gonic/gin"
 func RenderHome(c *gin.Context) {
 
 	// menu buttons
-	introductionButton := map[string]string{
+	welcomeButton := map[string]string{
 		"href": "#introduction",
+		"name": "Üdvözöllek",
+	}
+	introductionButton := map[string]string{
+		"href": "#story",
 		"name": "Bemutatkozás",
 	}
 	workplacesButton := map[string]string{
@@ -109,7 +113,7 @@ func RenderHome(c *gin.Context) {
 
 	c.HTML(200, "index.html", gin.H{
 		"title":      "Fábián Dávid | Portfólió",
-		"buttons":    []map[string]string{introductionButton, workplacesButton, studiesButton, projectsButton, contactButton},
+		"buttons":    []map[string]string{welcomeButton, introductionButton, workplacesButton, studiesButton, projectsButton, contactButton},
 		"projects":   []map[string]string{appointment, todoApp, portfolio},
 		"workplaces": []map[string]string{infolan, csmpsz},
 		"studies":    []map[string]string{iec, jgypk, gd, signum},
