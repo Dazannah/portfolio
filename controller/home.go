@@ -31,6 +31,15 @@ func RenderHome(c *gin.Context) {
 	}
 
 	//apps
+	usermanager := map[string]string{
+		"img":          "/public/pics/usermanager.png",
+		"title":        "Felhasználó/jogosultság kezelő",
+		"description":  "Felhasználók, igénylése, szerkesztése, törlése. Hozzájuk tartozó jogosultságok kezelése.",
+		"technologies": "Laravel, Tailwind CSS, Blade, Livewire, MySQL",
+		"link":         "http://usermanager.davidfabian.hu/",
+		"github":       "https://github.com/Dazannah/usermanager",
+	}
+
 	appointment := map[string]string{
 		"img":          "/public/pics/appointment.png",
 		"title":        "Appointment",
@@ -55,14 +64,14 @@ func RenderHome(c *gin.Context) {
 		"link":         "https://www.davidfabian.hu",
 		"github":       "https://github.com/Dazannah/portfolio",
 	}
-	todoApp := map[string]string{
-		"img":          "/public/pics/ToDo.png",
-		"title":        "ToDo app",
-		"description":  "Egy egyszerű CRUD aplikáció.",
-		"technologies": "Node.js, .ejs, htmx, Tailwind CSS, MongoDB",
-		"link":         "https://www.todoapp.davidfabian.hu",
-		"github":       "https://github.com/Dazannah/todo-nodejs",
-	}
+	// todoApp := map[string]string{
+	// 	"img":          "/public/pics/ToDo.png",
+	// 	"title":        "ToDo app",
+	// 	"description":  "Egy egyszerű CRUD aplikáció.",
+	// 	"technologies": "Node.js, .ejs, htmx, Tailwind CSS, MongoDB",
+	// 	"link":         "https://www.todoapp.davidfabian.hu",
+	// 	"github":       "https://github.com/Dazannah/todo-nodejs",
+	// }
 
 	//workplaces
 	csmpsz := map[string]string{
@@ -114,7 +123,7 @@ func RenderHome(c *gin.Context) {
 	c.HTML(200, "index.html", gin.H{
 		"title":      "Fábián Dávid | Portfólió",
 		"buttons":    []map[string]string{welcomeButton, introductionButton, workplacesButton, studiesButton, projectsButton, contactButton},
-		"projects":   []map[string]string{appointment, todoApp, portfolio},
+		"projects":   []map[string]string{usermanager, appointment, portfolio},
 		"workplaces": []map[string]string{infolan, csmpsz},
 		"studies":    []map[string]string{iec, jgypk, gd, signum},
 	})
