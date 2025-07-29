@@ -86,8 +86,11 @@ func RenderHome(c *gin.Context) {
 		"workPlaceName": "Infolan Kft.",
 		"date":          "2020 február - jelenleg is",
 		"position":      "Rendszergazda",
-		"description": `Rendszergazdai feladatok elvégzése melett, CSMEKHM intrawebes jogosultságigénylő alkalmazás fejlesztése, karbantartása.
-		NodeJS, MongoDB, és React-ot használva. 
+		"description": `Rendszergazdai feladatok elvégzése mellett, CSMEKHM intrawebes
+jogosultságigénylő alkalmazás fejlesztése, karbantartása. NodeJS, MongoDB,
+és React-ot használva. Jelenleg egy általánosabb, testreszabható verzió
+fejlesztésén dolgozom, Laravel, Blade, Livewire és MySQL-el, amely a
+kórházi rendszerből származó igényekre épül. 
 		`,
 		"worklocation": "Hódmezővásárhely, Makó",
 	}
